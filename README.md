@@ -1,97 +1,134 @@
-# 🛒 Retail Inventory Optimization Dashboard (2023)
+# 🛒 Retail Inventory Optimization Dashboard (Excel Project)
+
+Analyzing inventory and sales trends for Products A, B, and C over a 90-day retail period. This project explores stockout risks, restocking patterns, and optimization strategies using Microsoft Excel, pivot analysis, and interactive dashboarding.
+
+---
 
 ## 📊 Project Overview
 
-This project analyzes retail inventory and sales data for three products (A, B, and C) across multiple warehouses over a 90-day period in 2023. The goal is to identify stockout risks, overstock inefficiencies, and improve restocking strategies to support better operational planning and cost savings.
-
-Retailers often struggle with balancing inventory: too much leads to wasted storage costs, too little results in missed sales and customer dissatisfaction. This analysis helps address both issues using Excel-based data cleaning and Power BI dashboarding.
+Retail businesses constantly face the challenge of maintaining optimal inventory levels — too much stock increases storage costs, while too little causes missed sales and unhappy customers. This project analyzes daily sales, stock levels, and restocking behavior across three products to support better inventory decision-making.
 
 ---
 
 ## 🎯 Business Goals
 
-- Identify trends in daily stock levels, restocks, and sales across products and warehouses
-- Detect stockout risks and understocking patterns
-- Optimize restock timing based on average daily sales
-- Recommend strategies to improve inventory turnover and reduce excess
+- Analyze daily stock, restocks, and sales by product
+- Detect stockout risks and understocking trends
+- Optimize restock timing using 7-day average sales
+- Recommend actionable improvements to reduce waste and improve availability
 
 ---
 
-## 🗂️ Dataset Overview
+## 🗂️ Dataset Summary
 
-The dataset simulates retail operations data with the following fields:
+The dataset simulates 3 months of operations for 3 products (A, B, and C) stored across different warehouses.
 
-- `Date`: Daily record of activity
-- `Product`: Product name (A, B, C)
-- `Warehouse`: Fulfillment location (North, South, East)
-- `Sales`: Units sold per day
-- `Stock_Level`: Remaining inventory at end of day
-- `Restock_Amount`: Units added back into stock (if any)
-- `Stockout_Flag`: Calculated flag for when inventory drops below 10
-- `7_day_avg_sales`: Rolling 7-day average sales to monitor product demand
-
----
-
-## 🔧 Tools Used
-
-- **Excel** for data cleaning, pivot analysis, and calculated columns
-- **Power BI** for dashboard creation and data visualization
-- **Python** (initially, to validate structure and prep if needed)
+| Column           | Description                                |
+|------------------|--------------------------------------------|
+| `Date`           | Daily record of sales activity             |
+| `Product`        | Product category (A, B, or C)              |
+| `Warehouse`      | Fulfillment center (North, South, East)    |
+| `Sales`          | Number of units sold                       |
+| `Stock_Level`    | Inventory remaining at end of day          |
+| `Restock_Amount` | Units added into stock (if any)            |
+| `Stockout_Flag`  | Custom flag when stock < 10                |
+| `7_day_avg_sales`| Rolling 7-day average sales (for trends)   |
 
 ---
 
-## 🧼 Data Cleaning Steps (Excel)
+## 💻 Tools Used
 
-1. **Formatted Date column** to readable `dd/mm/yyyy` format
-2. **Removed duplicate records** to ensure data accuracy
-3. **Created `Stockout_Flag`** column to identify low-stock days (`=IF([Stock_Level]<10, "Yes", "No")`)
-4. **Calculated `7_day_avg_sales`** to estimate reorder points (rolling average of sales)
-5. **Created Pivot Tables** summarizing:
-   - Total Sales per Product and Warehouse
-   - Total Restock Volume
-   - Number of Stockout Days
-   - Weekly trends (using `=WEEKNUM()`)
+- Microsoft Excel (PivotTables, slicers, charts)
+- Manual data cleaning and calculated columns
+- PowerPoint (for annotated dashboard visuals)
 
 ---
 
-## 📊 Dashboard Features
+## 🧼 Step 1: Data Cleaning
 
-Built using Power BI, the dashboard includes the following visuals:
-
-- **Line Chart**: Stock levels over time for each product
-- **Bar Chart**: Total Sales vs Restock Volume
-- **KPI Cards**: Total Sales, Average Daily Sales, Stockout Days
-- **Weekly Breakdown Table**: Restock timing and demand behavior
-- **Recommendations Panel**: Strategic suggestions based on insights
-
----
-
-## 🔍 Key Insights
-
-- 📉 **Product stock levels** declined steadily across all warehouses, showing predictable consumption patterns.
-- ⚠️ **Stockout days were minimal**, but products consistently dipped below critical thresholds, especially near restock intervals.
-- 🛒 **All products sold evenly (~12 units/day)**, meaning restock cycles can be predicted using historical average sales.
-- 🚚 **Restocks occurred every 15 days**, suggesting room to optimize frequency or automate alerts.
-- 🧊 **Warehouse performance** was similar across regions, but Product C in the East warehouse approached stockout more often than others.
+- Formatted dates to dd/mm/yyyy
+- Removed duplicate entries
+- Verified numeric columns (Sales, Stock_Level)
+- Created `Stockout_Flag` with: `=IF([@[Stock_Level]]<10, "Yes", "No")`
+- Calculated `7_day_avg_sales` using rolling averages
+- Added `Week` grouping: `=WEEKNUM([@Date])`
 
 ---
 
-## ✅ Strategic Recommendations
+## 🔍 Step 2: Exploratory Data Analysis (EDA)
 
-1. **Set automated low-stock alerts** when inventory drops below 30 units to avoid stockouts.
-2. **Adjust restock frequency** from 15 days to 12 days based on 7-day rolling sales averages.
-3. **Introduce dynamic reorder points** that adapt to product demand rather than fixed cycles.
-4. **Visualize daily trends** weekly to track seasonal or campaign-related spikes in product demand.
-5. **Prioritize safety stock thresholds** for Product C in the East warehouse to avoid last-minute restocks.
+Used PivotTables and Excel formulas to analyze:
+
+- 📦 Total Sales by Product
+- 📉 Average Stock Level by Product
+- 🔁 Restock Frequency per Product
+- ⚠️ Stockouts by Product and Week
+
+### Charts Created:
+
+- **Bar Chart:** Total Sales by Product
+- **Line Graph:** Weekly Sales Trends
+- **Pie Chart:** Stockouts by Product
+- **Column Chart:** Average Stock Levels
+- **Slicers:** Interactive filters for Product and Week
+
+---
+
+## 📌 Step 3: Key Insights
+
+### ✅ Product C
+- Highest average stock level (162 units)
+- Highest total sales (1,476 units)
+- Stock levels are high, but justified by demand
+
+### ⚠️ Product B
+- Most stockout days (11 days)
+- Current restocking pace is not meeting demand
+
+### 🔄 Product A
+- High sales (1,367 units) with lowest average stock (103 units)
+- Indicates fast turnover and a need for closer monitoring
+
+---
+
+## 📈 Step 4: Dashboard
+
+Built a clean and interactive dashboard featuring:
+
+- **Top KPIs:** Total Sales, Avg. Stock Level, Stockout Days
+- Weekly sales trend line graph
+- Stockouts pie chart
+- Product sales and stock level bar charts
+- Fully functional slicers by Product and Week
+
+📸 **Dashboard Preview**
+
+> ![Retail Inventory Dashboard](dashboard.png)
+
+---
+
+## 📦 Step 5: Business Recommendations
+
+1. **Product B**  
+   Increase restock frequency or amount to avoid recurring stockouts.
+
+2. **Product C**  
+   Reduce safety stock by 25–30% to avoid overstocking.
+
+3. **Product A**  
+   Introduce a low-stock alert system based on average sales velocity.
+
+4. **All Products**  
+   Automate restocking triggers using 7-day average sales to minimize manual planning.
 
 ---
 
 ## 📂 Files Included
 
-- `retail_inventory_cleaned.xlsx` – Cleaned dataset with calculated fields  
-- `inventory_dashboard.pbix` – Power BI file with visuals and layout  
-- `dashboard_screenshot.png` – Preview of the full dashboard  
-- `README.md` – Full project documentation
+- `retail_inventory_project.xlsx` – cleaned data + dashboard
+- `dashboard_screenshot.png` – Excel dashboard visual
+- `README.md` – full write-up
 
 ---
+
 
