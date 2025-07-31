@@ -126,7 +126,7 @@ Built a clean and interactive dashboard featuring:
 ## 📂 Files Included
 
 - `retail_inventory_project.xlsx` – cleaned data + dashboard
-- `dashboard_screenshot.png` – Excel dashboard visual
+- `dashboard.png` – Excel dashboard visual
 - `README.md` – full write-up
 
 ---
