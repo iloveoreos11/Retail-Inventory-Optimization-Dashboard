@@ -103,7 +103,7 @@ Built a clean and interactive dashboard featuring:
 
 📸 **Dashboard Preview**
 
-> ![Retail Inventory Dashboard](dashboard.png)
+> ![Retail Inventory Dashboard](retail.png)
 
 ---
 
