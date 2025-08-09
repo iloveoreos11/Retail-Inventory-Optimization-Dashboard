@@ -6,7 +6,7 @@ Analyzing inventory and sales trends for Products A, B, and C over a 90-day reta
 
 ## 📊 Project Overview
 
-Retail businesses constantly face the challenge of maintaining optimal inventory levels — too much stock increases storage costs, while too little causes missed sales and unhappy customers. This project analyzes daily sales, stock levels, and restocking behavior across three products to support better inventory decision-making.
+Retail businesses constantly face the challenge of maintaining optimal inventory levels too much stock increases storage costs, while too little causes missed sales and unhappy customers. This project analyzes daily sales, stock levels, and restocking behavior across three products to support better inventory decision-making.
 
 ---
 
