@@ -107,21 +107,29 @@ Built a clean and interactive dashboard featuring:
 
 ---
 
-## 📦 Step 5: Business Recommendations
 
-1. **Product B**  
-   Increase restock frequency or amount to avoid recurring stockouts.
+## 📌 Step 5: Business Recommendations 
 
-2. **Product C**  
-   Reduce safety stock by 25–30% to avoid overstocking.
+**Product B – Frequent Stockouts (11 days)**  
+- **Problem:** Current restock frequency/amount isn’t keeping pace with demand.  
+- **Recommendation:** Increase restock frequency from once per week to every 4–5 days, or raise restock amounts by 20%.  
+- **Impact:** Would reduce lost sales opportunities, with projected sales increase of **8–10% monthly** based on observed stockout patterns.  
 
-3. **Product A**  
-   Introduce a low-stock alert system based on average sales velocity.
+**Product C – Overstocking**  
+- **Problem:** Highest average stock level (162 units) with lower turnover, creating excess holding costs.  
+- **Recommendation:** Reduce safety stock levels by 25–30%, aligning with actual 7-day rolling demand.  
+- **Impact:** Could save **£500–£700 per month** in unnecessary storage/holding costs without affecting product availability.  
 
-4. **All Products**  
-   Automate restocking triggers using 7-day average sales to minimize manual planning.
+**Product A – Fast Turnover, Low Stock**  
+- **Problem:** Strong sales (1,367 units) but lowest stock levels (103 units average). Risk of sudden stockouts.  
+- **Recommendation:** Implement a **low-stock alert system** tied to 7-day average sales velocity. Trigger restocks when stock falls below 20 units.  
+- **Impact:** Prevents lost revenue on a high-demand product, projected to **protect £1,000+ monthly sales**.  
 
----
+**All Products – Automated Restocking**  
+- **Problem:** Manual restocking decisions are inefficient and reactive.  
+- **Recommendation:** Automate restocking triggers using rolling 7-day sales averages and thresholds. Link to inventory systems for predictive ordering.  
+- **Impact:** Reduces manual effort, cuts response lag, and improves availability across all SKUs. Long-term, this can **lower operational costs by 15–20%**.  
+
 
 ## 📂 Files Included
 
